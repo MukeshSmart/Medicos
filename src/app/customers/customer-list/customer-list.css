@@ -1,0 +1,38 @@
+.toolbar-title {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.add-btn {
+  margin-left: 1rem;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.content-wrapper {
+  padding: 1.5rem;
+}
+
+.customer-table {
+  width: 100%;
+}
+
+.name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar-icon {
+  color: var(--mat-sys-primary);
+}
+
+.customer-row:hover {
+  background-color: var(--mat-sys-surface-variant);
+  cursor: pointer;
+}

@@ -1,0 +1,68 @@
+<mat-toolbar color="primary">
+  <span class="toolbar-title">Customers</span>
+  <span class="toolbar-spacer"></span>
+  <mat-chip-set>
+    <mat-chip highlighted>{{ customers().length }} total</mat-chip>
+  </mat-chip-set>
+  <button mat-stroked-button class="add-btn" (click)="openCreateDialog()">
+    Add Customer
+  </button>
+</mat-toolbar>
+
+<div class="content-wrapper">
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <table mat-table [dataSource]="customers()" class="customer-table">
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>#</th>
+          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let row">
+            <div class="name-cell">
+              {{ row.name }}
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let row">{{ row.email }}</td>
+        </ng-container>
+
+        <!-- Phone Column -->
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef>Phone</th>
+          <td mat-cell *matCellDef="let row">{{ row.phone }}</td>
+        </ng-container>
+
+        <!-- Date of Birth Column -->
+        <ng-container matColumnDef="dateOfBirth">
+          <th mat-header-cell *matHeaderCellDef>Date of Birth</th>
+          <td mat-cell *matCellDef="let row">{{ row.dateOfBirth }}</td>
+        </ng-container>
+
+        <!-- Address Column -->
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef>Address</th>
+          <td mat-cell *matCellDef="let row">{{ row.address }}</td>
+        </ng-container>
+
+        <!-- Registered On Column -->
+        <ng-container matColumnDef="registeredOn">
+          <th mat-header-cell *matHeaderCellDef>Registered On</th>
+          <td mat-cell *matCellDef="let row">{{ row.registeredOn }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="customer-row"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

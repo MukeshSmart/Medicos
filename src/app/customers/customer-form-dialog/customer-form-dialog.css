@@ -1,0 +1,22 @@
+h2[mat-dialog-title] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 420px;
+  padding-top: 0.5rem;
+}
+
+.customer-form mat-form-field {
+  width: 100%;
+}
+
+mat-dialog-actions {
+  padding: 1rem 0 0;
+  gap: 0.5rem;
+}
