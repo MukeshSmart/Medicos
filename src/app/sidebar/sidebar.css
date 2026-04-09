@@ -1,0 +1,60 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background-color: #1a237e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.brand-icon {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  color: #90caf9;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+mat-nav-list {
+  padding-top: 8px;
+}
+
+a[mat-list-item] {
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 6px;
+  margin: 2px 8px;
+  transition: background 0.2s;
+}
+
+a[mat-list-item]:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+}
+
+a[mat-list-item].active-link {
+  background-color: rgba(144, 202, 249, 0.25) !important;
+  color: #90caf9 !important;
+}
+
+a[mat-list-item].active-link mat-icon {
+  color: #90caf9 !important;
+}
+
+mat-icon[matListItemIcon] {
+  color: rgba(255, 255, 255, 0.7);
+}

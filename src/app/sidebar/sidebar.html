@@ -1,0 +1,16 @@
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-name">Medicos</span>
+  </div>
+
+  <mat-nav-list>
+    @for (item of menuItems; track item.route) {
+      <a mat-list-item
+         [routerLink]="item.route"
+         routerLinkActive="active-link"
+         [routerLinkActiveOptions]="{ exact: false }">
+        <span matListItemTitle>{{ item.label }}</span>
+      </a>
+    }
+  </mat-nav-list>
+</aside>
